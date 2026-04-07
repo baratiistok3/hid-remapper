@@ -67,6 +67,7 @@ target_link_libraries(remapper
     hardware_pio
     hardware_dma
     hardware_flash
+    hardware_watchdog
     $<$<STREQUAL:${PICO_BOARD},remapper_v8>:hardware_adc>
     tinyusb_device
     tinyusb_host
@@ -117,6 +118,7 @@ target_include_directories(remapper_dual_a PRIVATE
 target_link_libraries(remapper_dual_a
     pico_stdlib
     hardware_flash
+    hardware_watchdog
     $<$<STREQUAL:${PICO_BOARD},remapper_v7>:hardware_i2c>
     hardware_pio
     tinyusb_device
@@ -180,6 +182,7 @@ target_link_libraries(remapper_serial
     pico_stdlib
     pico_unique_id
     hardware_flash
+    hardware_watchdog
     tinyusb_device
     tinyusb_board
 )
