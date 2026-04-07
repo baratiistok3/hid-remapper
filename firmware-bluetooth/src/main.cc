@@ -850,6 +850,10 @@ void reset_to_bootloader() {
     sys_reboot(DFU_MAGIC_UF2_RESET);
 }
 
+void reboot() {
+    sys_reboot(SYS_REBOOT_COLD);
+}
+
 void flash_b_side() {
 }
 
